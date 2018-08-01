@@ -101,7 +101,7 @@ export function Attachable<TBase extends Constructor<HalResource>>(Base:TBase) {
         .then((result:{response:HalResource, uploadUrl:string }[]) => {
           setTimeout(() => this.NotificationsService.remove(notification), 700);
 
-          if (!this.isNew) {
+          if (!!this.attachmentsBackend && !this.isNew) {
             this.updateAttachments();
           } else {
             result.forEach(r => {

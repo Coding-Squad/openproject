@@ -109,4 +109,4 @@ export class AttachmentsComponent implements OnInit, OnDestroy {
   }
 }
 
-DynamicBootstrapper.register({ selector: 'attachments', cls: AttachmentsComponent });
+DynamicBootstrapper.register({ selector: 'attachments', cls: AttachmentsComponent, embeddable: true });
